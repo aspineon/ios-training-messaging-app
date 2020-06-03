@@ -10,34 +10,37 @@ import UIKit
 
 class MessageTableViewCell: UITableViewCell {
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configure()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("not implemented")
-    }
-    
-    private func configure() {
-        contentView.addSubview(bubbleImage())
-        contentView.addSubview(messageLabel())
-    }
-    
-    private func bubbleImage() -> UIImageView {
+    lazy var bubbleImage: UIImageView = {
         let bubbleImage = UIImageView(frame: .zero)
         bubbleImage.contentMode = .scaleToFill
         bubbleImage.translatesAutoresizingMaskIntoConstraints = false
         return bubbleImage
-    }
-    
-    private func messageLabel() -> UILabel {
+    }()
+    lazy var messageLabel: UILabel = {
         let messageLabel = UILabel(frame: .zero)
         messageLabel.textColor = .white
         messageLabel.font = UIFont.systemFont(ofSize: 14)
         messageLabel.numberOfLines = 0
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         return messageLabel
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configureLayout()
     }
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("not implemented")
+    }
+    
+    func configureLayout() {
+        contentView.addSubview(bubbleImage)
+        contentView.addSubview(messageLabel)
+    }
+    
+    func update(message: Message) {
+        messageLabel.text = message.text
+    }
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 class MessagesViewController: UITableViewController {
     
     let messages = [
-        Message(text: "Xcode is great!", sentByMe: false),
+        Message(text: "Xcode is great!kajdskf hsdjkhfsdkjfhsd kjhfkjsdhfkjsdh sdklfklsdjflksdj sldkflskdjflkj sdlkfsldkfjldsk", sentByMe: false),
         Message(text: "No way!", sentByMe: true),
         Message(text: "Yes it is", sentByMe: false),
     ]
@@ -19,7 +19,7 @@ class MessagesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: messageCellIdentifier)
+        tableView.register(LeftMessageTableViewCell.self, forCellReuseIdentifier: messageCellIdentifier)
         title = "Messages"
     }
     
@@ -28,8 +28,8 @@ class MessagesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: messageCellIdentifier)!
-        cell.textLabel?.text = messages[indexPath.row].text
+        let cell = tableView.dequeueReusableCell(withIdentifier: messageCellIdentifier) as! LeftMessageTableViewCell
+        cell.update(message: messages[indexPath.row])
         return cell
     }
 
