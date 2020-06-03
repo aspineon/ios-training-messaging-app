@@ -13,6 +13,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         let contactsStoryboard = UIStoryboard(name: "Contacts", bundle: Bundle.main)
         let contactsViewController = contactsStoryboard.instantiateViewController(identifier: "contactsViewController")
+        contactsViewController.title = "Contacts"
         
         viewControllers = [
             UINavigationController(rootViewController: MessagesViewController()),
