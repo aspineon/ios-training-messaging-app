@@ -17,6 +17,7 @@
 		80A3E3F124879BCF006E3969 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3F024879BCF006E3969 /* MessageTableViewCell.swift */; };
 		80A3E3F32487A255006E3969 /* MessageCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3F22487A255006E3969 /* MessageCellType.swift */; };
 		80A3E3F52487A2C4006E3969 /* LeftMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3F42487A2C3006E3969 /* LeftMessageTableViewCell.swift */; };
+		80A3E3F72487A869006E3969 /* RightMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3F62487A869006E3969 /* RightMessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		80A3E3F024879BCF006E3969 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		80A3E3F22487A255006E3969 /* MessageCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellType.swift; sourceTree = "<group>"; };
 		80A3E3F42487A2C3006E3969 /* LeftMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessageTableViewCell.swift; sourceTree = "<group>"; };
+		80A3E3F62487A869006E3969 /* RightMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +137,9 @@
 				80A3E3BF248785F2006E3969 /* MessagesViewController.swift */,
 				80A3E3EE248791EA006E3969 /* Message.swift */,
 				80A3E3F024879BCF006E3969 /* MessageTableViewCell.swift */,
-				80A3E3F42487A2C3006E3969 /* LeftMessageTableViewCell.swift */,
 				80A3E3F22487A255006E3969 /* MessageCellType.swift */,
+				80A3E3F42487A2C3006E3969 /* LeftMessageTableViewCell.swift */,
+				80A3E3F62487A869006E3969 /* RightMessageTableViewCell.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A3E3F72487A869006E3969 /* RightMessageTableViewCell.swift in Sources */,
 				80A3E3EF248791EA006E3969 /* Message.swift in Sources */,
 				80A3E3F124879BCF006E3969 /* MessageTableViewCell.swift in Sources */,
 				80A3E3F32487A255006E3969 /* MessageCellType.swift in Sources */,

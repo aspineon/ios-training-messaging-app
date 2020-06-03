@@ -15,12 +15,18 @@ class MessagesViewController: UITableViewController {
         Message(text: "No way!", sentByMe: true),
         Message(text: "Yes it is", sentByMe: false),
     ]
-    let messageCellIdentifier = "messageCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(LeftMessageTableViewCell.self, forCellReuseIdentifier: messageCellIdentifier)
         title = "Messages"
+        configureTableView()
+    }
+    
+    private func configureTableView() {
+        tableView.separatorStyle = .none
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(LeftMessageTableViewCell.self, forCellReuseIdentifier: MessageCellType.left.rawValue)
+        tableView.register(RightMessageTableViewCell.self, forCellReuseIdentifier: MessageCellType.right.rawValue)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,8 +34,14 @@ class MessagesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: messageCellIdentifier) as! LeftMessageTableViewCell
-        cell.update(message: messages[indexPath.row])
+        let message = messages[indexPath.row]
+        var cell: MessageTableViewCell
+        if message.sentByMe {
+            cell = tableView.dequeueReusableCell(withIdentifier: MessageCellType.left.rawValue) as! LeftMessageTableViewCell
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: MessageCellType.right.rawValue) as! RightMessageTableViewCell
+        }
+        cell.update(message: message)
         return cell
     }
 

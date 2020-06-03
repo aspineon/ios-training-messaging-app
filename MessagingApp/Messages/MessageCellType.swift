@@ -6,9 +6,9 @@
 //  Copyright © 2020 Inbright Łukasz Andrzejewski. All rights reserved.
 //
 
-enum MessageCellType {
+enum MessageCellType: String {
     
-    case leftText
-    case rightText
+    case left
+    case right
     
 }
