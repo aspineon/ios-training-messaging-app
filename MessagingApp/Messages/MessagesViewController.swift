@@ -11,7 +11,7 @@ import UIKit
 class MessagesViewController: UITableViewController {
     
     let messages = [
-        Message(text: "Xcode is great!kajdskf hsdjkhfsdkjfhsd kjhfkjsdhfkjsdh sdklfklsdjflksdj sldkflskdjflkj sdlkfsldkfjldsk", sentByMe: false),
+        Message(text: "Xcode is great!", sentByMe: false),
         Message(text: "No way!", sentByMe: true),
         Message(text: "Yes it is", sentByMe: false),
     ]
@@ -23,6 +23,7 @@ class MessagesViewController: UITableViewController {
     }
     
     private func configureTableView() {
+        tableView.allowsSelection = false
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(LeftMessageTableViewCell.self, forCellReuseIdentifier: MessageCellType.left.rawValue)
