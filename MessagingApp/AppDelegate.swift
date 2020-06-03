@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let rootViewController = MessagesViewController()
         let navigationViewController = UINavigationController(rootViewController: rootViewController)
-        initWindow(rootViewController: navigationViewController)
+        initWindow(withController: navigationViewController)
         return true
     }
     
-    private func initWindow(rootViewController: UIViewController) {
+    private func initWindow(withController rootViewController: UIViewController) {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
