@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class TabBarController: UITabBarController {
     
@@ -20,7 +21,10 @@ class TabBarController: UITabBarController {
             UINavigationController(rootViewController: contactsViewController)
         ]
         
+        tabBar.tintColor = .darkGray
         tabBar.items?[0].title = "Messages"
+        tabBar.items?[0].image = UIImage.fontAwesomeIcon(name: .addressBook, style: .regular, textColor: .lightGray, size: CGSize(width: 25,height: 25))
+        tabBar.items?[1].image = UIImage.fontAwesomeIcon(name: .comment, style: .regular, textColor: .lightGray, size: CGSize(width: 25,height: 25))
     }
     
 }

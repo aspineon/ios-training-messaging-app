@@ -16,10 +16,6 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         Contact(firstName: "Anna", lastName: "Wesołowska", profilePhotoUrl: "")
     ]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
