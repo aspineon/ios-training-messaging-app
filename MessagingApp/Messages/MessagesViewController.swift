@@ -18,7 +18,6 @@ class MessagesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Messages"
         configureTableView()
     }
     

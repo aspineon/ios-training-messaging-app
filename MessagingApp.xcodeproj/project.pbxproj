@@ -20,6 +20,8 @@
 		80A3E3F72487A869006E3969 /* RightMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3F62487A869006E3969 /* RightMessageTableViewCell.swift */; };
 		80A3E3F92487B07D006E3969 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3F82487B07D006E3969 /* TabBarController.swift */; };
 		80A3E3FC2487B2CE006E3969 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E3FB2487B2CE006E3969 /* Contacts.storyboard */; };
+		80A3E3FE2487CC91006E3969 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3FD2487CC91006E3969 /* Contact.swift */; };
+		80A3E4002487CD5F006E3969 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3FF2487CD5F006E3969 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		80A3E3F62487A869006E3969 /* RightMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageTableViewCell.swift; sourceTree = "<group>"; };
 		80A3E3F82487B07D006E3969 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		80A3E3FB2487B2CE006E3969 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		80A3E3FD2487CC91006E3969 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		80A3E3FF2487CD5F006E3969 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				80A3E3FB2487B2CE006E3969 /* Contacts.storyboard */,
+				80A3E3FF2487CD5F006E3969 /* ContactViewController.swift */,
+				80A3E3FD2487CC91006E3969 /* Contact.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A3E3FE2487CC91006E3969 /* Contact.swift in Sources */,
 				80A3E3F72487A869006E3969 /* RightMessageTableViewCell.swift in Sources */,
 				80A3E3F92487B07D006E3969 /* TabBarController.swift in Sources */,
 				80A3E3EF248791EA006E3969 /* Message.swift in Sources */,
@@ -306,6 +313,7 @@
 				80A3E3C0248785F2006E3969 /* MessagesViewController.swift in Sources */,
 				80A3E3F52487A2C4006E3969 /* LeftMessageTableViewCell.swift in Sources */,
 				80A3E3BC248785F2006E3969 /* AppDelegate.swift in Sources */,
+				80A3E4002487CD5F006E3969 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

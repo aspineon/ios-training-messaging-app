@@ -10,22 +10,45 @@
         <!--Contacts-->
         <scene sceneID="CrS-Kc-3oK">
             <objects>
-                <viewController storyboardIdentifier="contactsViewController" id="GpQ-1h-DzC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactsViewController" id="GpQ-1h-DzC" customClass="ContactViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fFk-qM-n9P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xp1-7N-3BI">
-                                <rect key="frame" x="172.5" y="437.5" width="69.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R2P-aN-Ck6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactCell" textLabel="Ck8-my-BUV" style="IBUITableViewCellStyleDefault" id="IRN-O3-EWz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IRN-O3-EWz" id="20b-5x-Zgj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ck8-my-BUV">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GpQ-1h-DzC" id="lg6-RK-wDo"/>
+                                    <outlet property="delegate" destination="GpQ-1h-DzC" id="BgC-Wh-t6K"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xp1-7N-3BI" firstAttribute="centerY" secondItem="fFk-qM-n9P" secondAttribute="centerY" id="clZ-nt-xlZ"/>
-                            <constraint firstItem="xp1-7N-3BI" firstAttribute="centerX" secondItem="fFk-qM-n9P" secondAttribute="centerX" id="wWO-sa-JTV"/>
+                            <constraint firstItem="R2P-aN-Ck6" firstAttribute="leading" secondItem="3xO-5j-Xd1" secondAttribute="leading" id="Nwl-Gd-ChE"/>
+                            <constraint firstItem="R2P-aN-Ck6" firstAttribute="top" secondItem="3xO-5j-Xd1" secondAttribute="top" id="X4K-2d-mWh"/>
+                            <constraint firstItem="3xO-5j-Xd1" firstAttribute="bottom" secondItem="R2P-aN-Ck6" secondAttribute="bottom" id="aNj-De-LHE"/>
+                            <constraint firstItem="3xO-5j-Xd1" firstAttribute="trailing" secondItem="R2P-aN-Ck6" secondAttribute="trailing" id="lSd-LU-L5b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3xO-5j-Xd1"/>
                     </view>

@@ -19,6 +19,8 @@ class TabBarController: UITabBarController {
             UINavigationController(rootViewController: MessagesViewController()),
             UINavigationController(rootViewController: contactsViewController)
         ]
+        
+        tabBar.items?[0].title = "Messages"
     }
     
 }
