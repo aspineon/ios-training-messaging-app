@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80A3E3BC248785F2006E3969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3BB248785F2006E3969 /* AppDelegate.swift */; };
-		80A3E3BE248785F2006E3969 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3BD248785F2006E3969 /* SceneDelegate.swift */; };
-		80A3E3C0248785F2006E3969 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3BF248785F2006E3969 /* ViewController.swift */; };
-		80A3E3C3248785F2006E3969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E3C1248785F2006E3969 /* Main.storyboard */; };
+		80A3E3C0248785F2006E3969 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3BF248785F2006E3969 /* MessagesViewController.swift */; };
 		80A3E3C5248785F4006E3969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E3C4248785F4006E3969 /* Assets.xcassets */; };
 		80A3E3C8248785F4006E3969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E3C6248785F4006E3969 /* LaunchScreen.storyboard */; };
 		80A3E3D3248785F5006E3969 /* MessagingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E3D2248785F5006E3969 /* MessagingAppTests.swift */; };
@@ -37,9 +35,7 @@
 /* Begin PBXFileReference section */
 		80A3E3B8248785F2006E3969 /* MessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A3E3BB248785F2006E3969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80A3E3BD248785F2006E3969 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80A3E3BF248785F2006E3969 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		80A3E3C2248785F2006E3969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80A3E3BF248785F2006E3969 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		80A3E3C4248785F4006E3969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80A3E3C7248785F4006E3969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80A3E3C9248785F4006E3969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,10 @@
 		80A3E3BA248785F2006E3969 /* MessagingApp */ = {
 			isa = PBXGroup;
 			children = (
+				80A3E3EC24878708006E3969 /* Resources */,
+				80A3E3EB248786EB006E3969 /* Messages */,
 				80A3E3BB248785F2006E3969 /* AppDelegate.swift */,
-				80A3E3BD248785F2006E3969 /* SceneDelegate.swift */,
-				80A3E3BF248785F2006E3969 /* ViewController.swift */,
-				80A3E3C1248785F2006E3969 /* Main.storyboard */,
-				80A3E3C4248785F4006E3969 /* Assets.xcassets */,
 				80A3E3C6248785F4006E3969 /* LaunchScreen.storyboard */,
-				80A3E3C9248785F4006E3969 /* Info.plist */,
 			);
 			path = MessagingApp;
 			sourceTree = "<group>";
@@ -126,6 +119,23 @@
 				80A3E3DF248785F5006E3969 /* Info.plist */,
 			);
 			path = MessagingAppUITests;
+			sourceTree = "<group>";
+		};
+		80A3E3EB248786EB006E3969 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				80A3E3BF248785F2006E3969 /* MessagesViewController.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		80A3E3EC24878708006E3969 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80A3E3C4248785F4006E3969 /* Assets.xcassets */,
+				80A3E3C9248785F4006E3969 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +244,6 @@
 			files = (
 				80A3E3C8248785F4006E3969 /* LaunchScreen.storyboard in Resources */,
 				80A3E3C5248785F4006E3969 /* Assets.xcassets in Resources */,
-				80A3E3C3248785F2006E3969 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A3E3C0248785F2006E3969 /* ViewController.swift in Sources */,
+				80A3E3C0248785F2006E3969 /* MessagesViewController.swift in Sources */,
 				80A3E3BC248785F2006E3969 /* AppDelegate.swift in Sources */,
-				80A3E3BE248785F2006E3969 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		80A3E3C1248785F2006E3969 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				80A3E3C2248785F2006E3969 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		80A3E3C6248785F4006E3969 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34A9J24W7Y;
-				INFOPLIST_FILE = MessagingApp/Info.plist;
+				INFOPLIST_FILE = MessagingApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34A9J24W7Y;
-				INFOPLIST_FILE = MessagingApp/Info.plist;
+				INFOPLIST_FILE = MessagingApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
