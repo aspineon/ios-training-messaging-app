@@ -15,6 +15,17 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         Contact(firstName: "Marek", lastName: "Nowak", profilePhotoUrl: ""),
         Contact(firstName: "Anna", lastName: "Wesołowska", profilePhotoUrl: "")
     ]
+    var contactsService: ContactsService?
+    
+    override func viewDidLoad() {
+        do {
+            contactsService = try SQLiteContactsService(dbFile: "db.sqlite3")
+        } catch let error {
+            print("Exception: \(error)")
+        }
+        contactsService?.add(contact: contacts[0])
+        print(contactsService?.getAll())
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
