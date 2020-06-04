@@ -1,0 +1,14 @@
+{
+    "contacts": [
+        {
+            "firstName": "Jan",
+            "lastName": "Kowalski",
+            "photoUrl": "https://picsum.photos/200"
+        },
+        {
+            "firstName": "Maria",
+            "lastName": "Nowak",
+            "photoUrl": "https://picsum.photos/200"
+        },
+    ]
+}

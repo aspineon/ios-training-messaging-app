@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ContactViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContactViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    @IBOutlet weak var contactsSerach: UISearchBar!
+    @IBOutlet weak var contactsTableView: UITableView!
     
     let contacts = [
         Contact(firstName: "Jan", lastName: "Kowalski", profilePhotoUrl: ""),
@@ -16,6 +19,7 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         Contact(firstName: "Anna", lastName: "Wesołowska", profilePhotoUrl: "")
     ]
     var contactsService: ContactsService?
+    var filteredContacts: [Contact]?
     
     override func viewDidLoad() {
         do {
@@ -24,19 +28,23 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("Exception: \(error)")
         }
         contactsService?.add(contact: contacts[0])
-        print(contactsService?.getAll())
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return filteredContacts?.count ?? contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell")!
-        let contact = contacts[indexPath.row]
+        let contact =  filteredContacts == nil ? contacts[indexPath.row] : filteredContacts![indexPath.row]
         cell.textLabel?.text = "\(contact.firstName) \(contact.lastName)"
         cell.imageView?.image = UIImage(named: "profile")
         return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredContacts = contacts.filter { $0.lastName.hasPrefix(searchText) }
+        contactsTableView.reloadData()
     }
     
 }
