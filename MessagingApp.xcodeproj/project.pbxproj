@@ -37,6 +37,7 @@
 		80A3E418248916CB006E3969 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E417248916CB006E3969 /* contacts.json */; };
 		80A3E41A24891BD4006E3969 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E41924891BD4006E3969 /* Contacts.swift */; };
 		80A3E41C24892368006E3969 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E41B24892368006E3969 /* ContactDetailsViewController.swift */; };
+		80A3E41E24892B7E006E3969 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E41D24892B7E006E3969 /* Global.swift */; };
 		DB8465801ABEC17369AD1237 /* Pods_MessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E32E8DD8B628204E9810C1B /* Pods_MessagingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		80A3E417248916CB006E3969 /* contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		80A3E41924891BD4006E3969 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		80A3E41B24892368006E3969 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		80A3E41D24892B7E006E3969 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		8E32E8DD8B628204E9810C1B /* Pods_MessagingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A507FC72839028CB2E841EDA /* Pods_MessagingApp_MessagingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingApp_MessagingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				80A3E3BB248785F2006E3969 /* AppDelegate.swift */,
 				80A3E3F82487B07D006E3969 /* TabBarController.swift */,
 				80A3E3C6248785F4006E3969 /* LaunchScreen.storyboard */,
+				80A3E41D24892B7E006E3969 /* Global.swift */,
 			);
 			path = MessagingApp;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				80A3E3BC248785F2006E3969 /* AppDelegate.swift in Sources */,
 				80A3E4002487CD5F006E3969 /* ContactViewController.swift in Sources */,
 				80A3E41A24891BD4006E3969 /* Contacts.swift in Sources */,
+				80A3E41E24892B7E006E3969 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

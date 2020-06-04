@@ -27,14 +27,9 @@ class PhotosViewController: UICollectionViewController, UICollectionViewDelegate
     }
     
     func getImage(at indexPath: IndexPath) {
-        DispatchQueue.global(qos: .utility).async { [weak self] in
-            guard let self = self,  let url = URL(string: "https://picsum.photos/200"), let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {
-                return
-            }
-            DispatchQueue.main.async {
-                if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
-                    cell.update(image: image)
-                }
+        loadImage(from: "https://picsum.photos/200") { image in
+            if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
+                cell.update(image: image)
             }
         }
     }

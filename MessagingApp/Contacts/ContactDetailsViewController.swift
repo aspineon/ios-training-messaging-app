@@ -12,6 +12,7 @@ class ContactDetailsViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var fullnameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var contact: Contact?
     
@@ -20,13 +21,11 @@ class ContactDetailsViewController: UIViewController {
         guard let contact = contact else {
             return
         }
-        DispatchQueue.global(qos: .utility).async { [weak self] in
-            guard let self = self,  let url = URL(string: contact.profilePhotoUrl), let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.profileImage.image = image
-            }
+        activityIndicator.startAnimating()
+        loadImage(from: contact.profilePhotoUrl) {
+            self.profileImage.image = $0
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
         }
         fullnameLabel.text = "\(contact.firstName) \(contact.lastName)"
     }
