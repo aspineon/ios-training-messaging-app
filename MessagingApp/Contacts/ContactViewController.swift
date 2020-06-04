@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ContactViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, ContactsServiceDelegate {
     
     @IBOutlet weak var contactsSerach: UISearchBar!
     @IBOutlet weak var contactsTableView: UITableView!
@@ -20,7 +20,8 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         do {
             contactsService = try SQLiteContactsService(dbFile: "db.sqlite3")
-            contacts = contactsService?.getAll() ?? []
+            contactsService?.delegate = self
+            contactsService?.refresh()
         } catch let error {
             print("Exception: \(error)")
         }
@@ -40,6 +41,11 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredContacts = contacts.filter { $0.lastName.hasPrefix(searchText) }
+        contactsTableView.reloadData()
+    }
+    
+    func contactsRefreshed() {
+        contacts = contactsService?.getAll() ?? []
         contactsTableView.reloadData()
     }
     

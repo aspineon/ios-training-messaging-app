@@ -12,4 +12,12 @@ struct Contact: Codable {
     let lastName: String
     let profilePhotoUrl: String
     
+    enum CodingKeys: String, CodingKey {
+        
+        case firstName
+        case lastName
+        case profilePhotoUrl = "photoUrl"
+        
+    }
+    
 }

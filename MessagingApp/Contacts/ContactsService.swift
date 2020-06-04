@@ -14,4 +14,12 @@ protocol ContactsService {
     
     func refresh()
     
+    var delegate: ContactsServiceDelegate? { get set }
+    
+}
+
+protocol ContactsServiceDelegate {
+
+    func contactsRefreshed()
+    
 }
