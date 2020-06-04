@@ -36,6 +36,7 @@
 		80A3E4162488F9E2006E3969 /* SQLiteContactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E4152488F9E2006E3969 /* SQLiteContactsService.swift */; };
 		80A3E418248916CB006E3969 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E417248916CB006E3969 /* contacts.json */; };
 		80A3E41A24891BD4006E3969 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E41924891BD4006E3969 /* Contacts.swift */; };
+		80A3E41C24892368006E3969 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E41B24892368006E3969 /* ContactDetailsViewController.swift */; };
 		DB8465801ABEC17369AD1237 /* Pods_MessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E32E8DD8B628204E9810C1B /* Pods_MessagingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		80A3E4152488F9E2006E3969 /* SQLiteContactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteContactsService.swift; sourceTree = "<group>"; };
 		80A3E417248916CB006E3969 /* contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		80A3E41924891BD4006E3969 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		80A3E41B24892368006E3969 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		8E32E8DD8B628204E9810C1B /* Pods_MessagingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A507FC72839028CB2E841EDA /* Pods_MessagingApp_MessagingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingApp_MessagingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -213,8 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				80A3E3FB2487B2CE006E3969 /* Contacts.storyboard */,
-				80A3E4072488D090006E3969 /* ContactDetails.storyboard */,
 				80A3E3FF2487CD5F006E3969 /* ContactViewController.swift */,
+				80A3E4072488D090006E3969 /* ContactDetails.storyboard */,
+				80A3E41B24892368006E3969 /* ContactDetailsViewController.swift */,
 				80A3E4132488F96D006E3969 /* ContactsService.swift */,
 				80A3E4152488F9E2006E3969 /* SQLiteContactsService.swift */,
 				80A3E41924891BD4006E3969 /* Contacts.swift */,
@@ -513,6 +516,7 @@
 				80A3E3F92487B07D006E3969 /* TabBarController.swift in Sources */,
 				80A3E4162488F9E2006E3969 /* SQLiteContactsService.swift in Sources */,
 				80A3E4142488F96D006E3969 /* ContactsService.swift in Sources */,
+				80A3E41C24892368006E3969 /* ContactDetailsViewController.swift in Sources */,
 				80A3E40F2488DA88006E3969 /* PhotoCell.swift in Sources */,
 				80A3E3EF248791EA006E3969 /* Message.swift in Sources */,
 				80A3E3F124879BCF006E3969 /* MessageTableViewCell.swift in Sources */,

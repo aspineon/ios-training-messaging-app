@@ -7,16 +7,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contact Details View Controller-->
         <scene sceneID="Iot-t0-AAf">
             <objects>
-                <viewController storyboardIdentifier="contactsDetailsViewController" id="YR8-fd-1qJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactsDetailsViewController" id="YR8-fd-1qJ" customClass="ContactDetailsViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MCT-Lu-sIK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zJ-y7-JQj">
-                                <rect key="frame" x="149" y="437.5" width="116" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ipm-1t-zUE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="jh3-BX-KVn"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-Zr-hhQ">
+                                <rect key="frame" x="0.0" y="394" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZfX-eO-nQO"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-57-Sh3">
+                                <rect key="frame" x="174" y="399" width="66" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -24,11 +37,22 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0zJ-y7-JQj" firstAttribute="centerY" secondItem="MCT-Lu-sIK" secondAttribute="centerY" id="9sq-ka-vuN"/>
-                            <constraint firstItem="0zJ-y7-JQj" firstAttribute="centerX" secondItem="MCT-Lu-sIK" secondAttribute="centerX" id="d0h-ux-7oQ"/>
+                            <constraint firstItem="n2t-dY-dfk" firstAttribute="trailing" secondItem="XTa-Zr-hhQ" secondAttribute="trailing" id="8pC-jl-vUR"/>
+                            <constraint firstItem="Ipm-1t-zUE" firstAttribute="top" secondItem="n2t-dY-dfk" secondAttribute="top" id="A6g-hu-z5A"/>
+                            <constraint firstItem="Ipm-1t-zUE" firstAttribute="top" secondItem="XTa-Zr-hhQ" secondAttribute="bottom" constant="-400" id="OoY-ij-3MW"/>
+                            <constraint firstItem="ugG-57-Sh3" firstAttribute="centerX" secondItem="MCT-Lu-sIK" secondAttribute="centerX" id="Xpl-fP-stp"/>
+                            <constraint firstItem="XTa-Zr-hhQ" firstAttribute="bottom" secondItem="ugG-57-Sh3" secondAttribute="bottom" constant="5" id="bis-An-ct2"/>
+                            <constraint firstItem="n2t-dY-dfk" firstAttribute="trailing" secondItem="Ipm-1t-zUE" secondAttribute="trailing" id="dE9-Y9-M6g"/>
+                            <constraint firstItem="Ipm-1t-zUE" firstAttribute="leading" secondItem="n2t-dY-dfk" secondAttribute="leading" id="kfT-vx-z8O"/>
+                            <constraint firstItem="XTa-Zr-hhQ" firstAttribute="leading" secondItem="n2t-dY-dfk" secondAttribute="leading" id="vZU-nG-gzd"/>
+                            <constraint firstItem="ugG-57-Sh3" firstAttribute="top" secondItem="XTa-Zr-hhQ" secondAttribute="top" constant="5" id="ylG-Jf-50g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n2t-dY-dfk"/>
                     </view>
+                    <connections>
+                        <outlet property="fullnameLabel" destination="ugG-57-Sh3" id="aIU-Yp-yUE"/>
+                        <outlet property="profileImage" destination="Ipm-1t-zUE" id="AXt-JF-SpU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g93-VH-gIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

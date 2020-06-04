@@ -36,7 +36,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="MEO-rB-kV4" kind="show" id="Fr6-uF-j4L"/>
+                                            <segue destination="MEO-rB-kV4" kind="show" identifier="showDetails" id="Fr6-uF-j4L"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

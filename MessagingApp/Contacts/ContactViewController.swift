@@ -49,4 +49,12 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         contactsTableView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let contactsDetailsViewController = segue.destination as! ContactDetailsViewController
+            let contact = contacts[contactsTableView.indexPathForSelectedRow!.row]
+            contactsDetailsViewController.contact = contact
+        }
+    }
+    
 }
