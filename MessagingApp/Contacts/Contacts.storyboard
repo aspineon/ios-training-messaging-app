@@ -35,6 +35,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MEO-rB-kV4" kind="show" id="Fr6-uF-j4L"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -56,7 +59,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJx-IR-nNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971.01449275362324" y="61.607142857142854"/>
+            <point key="canvasLocation" x="1557" y="100"/>
+        </scene>
+        <!--contactsDetailsViewController-->
+        <scene sceneID="37c-bZ-bMG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactDetails" referencedIdentifier="contactsDetailsViewController" id="MEO-rB-kV4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bk7-Yt-uJF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1b-m6-pZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="100"/>
         </scene>
     </scenes>
 </document>

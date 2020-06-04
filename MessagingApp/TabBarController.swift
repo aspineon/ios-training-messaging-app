@@ -12,19 +12,28 @@ import FontAwesome_swift
 class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
-        let contactsStoryboard = UIStoryboard(name: "Contacts", bundle: Bundle.main)
-        let contactsViewController = contactsStoryboard.instantiateViewController(identifier: "contactsViewController")
-        contactsViewController.title = "Contacts"
+        let contactsViewController = viewController(fromStoryboard: "Contacts", withIdentifier: "contactsViewController")
+        let photosViewController = viewController(fromStoryboard: "Photos", withIdentifier: "photosViewController")
         
         viewControllers = [
             UINavigationController(rootViewController: MessagesViewController()),
-            UINavigationController(rootViewController: contactsViewController)
+            UINavigationController(rootViewController: contactsViewController),
+            UINavigationController(rootViewController: photosViewController)
         ]
         
         tabBar.tintColor = .darkGray
         tabBar.items?[0].title = "Messages"
         tabBar.items?[0].image = UIImage.fontAwesomeIcon(name: .addressBook, style: .regular, textColor: .lightGray, size: CGSize(width: 25,height: 25))
         tabBar.items?[1].image = UIImage.fontAwesomeIcon(name: .comment, style: .regular, textColor: .lightGray, size: CGSize(width: 25,height: 25))
+        tabBar.items?[2].image = UIImage.fontAwesomeIcon(name: .image, style: .regular, textColor: .lightGray, size: CGSize(width: 25,height: 25))
     }
     
+    
+    private func viewController(fromStoryboard storyboardName: String, withIdentifier identifier: String) -> UIViewController {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(identifier: identifier)
+        viewController.title = storyboardName
+        return viewController
+    }
+  
 }

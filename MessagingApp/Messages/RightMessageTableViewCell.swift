@@ -18,7 +18,7 @@ class RightMessageTableViewCell: MessageTableViewCell {
             contentView.topAnchor.constraint(equalTo: bubbleImage.topAnchor, constant: -10),
             contentView.trailingAnchor.constraint(equalTo: bubbleImage.trailingAnchor, constant: 20),
             contentView.bottomAnchor.constraint(equalTo: bubbleImage.bottomAnchor, constant: 10),
-            contentView.leadingAnchor.constraint(equalTo: bubbleImage.leadingAnchor, constant: -20),
+            contentView.leadingAnchor.constraint(equalTo: bubbleImage.leadingAnchor, constant: -100),
             
             bubbleImage.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -5),
             bubbleImage.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 20),

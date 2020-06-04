@@ -16,7 +16,7 @@ class LeftMessageTableViewCell: MessageTableViewCell {
         super.configureLayout()
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: bubbleImage.topAnchor, constant: -10),
-            contentView.trailingAnchor.constraint(equalTo: bubbleImage.trailingAnchor, constant: 20),
+            contentView.trailingAnchor.constraint(equalTo: bubbleImage.trailingAnchor, constant: 100),
             contentView.bottomAnchor.constraint(equalTo: bubbleImage.bottomAnchor, constant: 10),
             contentView.leadingAnchor.constraint(equalTo: bubbleImage.leadingAnchor, constant: -20),
             

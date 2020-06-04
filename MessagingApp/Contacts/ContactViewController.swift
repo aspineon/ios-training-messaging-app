@@ -12,7 +12,7 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let contacts = [
         Contact(firstName: "Jan", lastName: "Kowalski", profilePhotoUrl: ""),
-        Contact(firstName: "Marek", lastName: "Noowal", profilePhotoUrl: ""),
+        Contact(firstName: "Marek", lastName: "Nowak", profilePhotoUrl: ""),
         Contact(firstName: "Anna", lastName: "Wesołowska", profilePhotoUrl: "")
     ]
     

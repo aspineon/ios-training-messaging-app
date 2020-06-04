@@ -27,6 +27,10 @@
 		80A3E4032487DE71006E3969 /* fontawesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E4012487DDF2006E3969 /* fontawesome.otf */; };
 		80A3E4042487DE75006E3969 /* fontawesome-brands.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E4022487DDF2006E3969 /* fontawesome-brands.otf */; };
 		80A3E4062487E090006E3969 /* fontawesome-solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E4052487E08D006E3969 /* fontawesome-solid-900.otf */; };
+		80A3E4082488D090006E3969 /* ContactDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E4072488D090006E3969 /* ContactDetails.storyboard */; };
+		80A3E40B2488D79F006E3969 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A3E40A2488D79F006E3969 /* Photos.storyboard */; };
+		80A3E40D2488D7E8006E3969 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E40C2488D7E8006E3969 /* PhotosViewController.swift */; };
+		80A3E40F2488DA88006E3969 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3E40E2488DA88006E3969 /* PhotoCell.swift */; };
 		DB8465801ABEC17369AD1237 /* Pods_MessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E32E8DD8B628204E9810C1B /* Pods_MessagingAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +83,10 @@
 		80A3E4012487DDF2006E3969 /* fontawesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.otf; sourceTree = "<group>"; };
 		80A3E4022487DDF2006E3969 /* fontawesome-brands.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-brands.otf"; sourceTree = "<group>"; };
 		80A3E4052487E08D006E3969 /* fontawesome-solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-solid-900.otf"; sourceTree = "<group>"; };
+		80A3E4072488D090006E3969 /* ContactDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactDetails.storyboard; sourceTree = "<group>"; };
+		80A3E40A2488D79F006E3969 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		80A3E40C2488D7E8006E3969 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		80A3E40E2488DA88006E3969 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		8E32E8DD8B628204E9810C1B /* Pods_MessagingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A507FC72839028CB2E841EDA /* Pods_MessagingApp_MessagingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingApp_MessagingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				80A3E3EC24878708006E3969 /* Resources */,
+				80A3E4092488D78A006E3969 /* Photos */,
 				80A3E3FA2487B2AA006E3969 /* Contacts */,
 				80A3E3EB248786EB006E3969 /* Messages */,
 				80A3E3BB248785F2006E3969 /* AppDelegate.swift */,
@@ -193,10 +202,21 @@
 			isa = PBXGroup;
 			children = (
 				80A3E3FB2487B2CE006E3969 /* Contacts.storyboard */,
+				80A3E4072488D090006E3969 /* ContactDetails.storyboard */,
 				80A3E3FF2487CD5F006E3969 /* ContactViewController.swift */,
 				80A3E3FD2487CC91006E3969 /* Contact.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		80A3E4092488D78A006E3969 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				80A3E40A2488D79F006E3969 /* Photos.storyboard */,
+				80A3E40C2488D7E8006E3969 /* PhotosViewController.swift */,
+				80A3E40E2488DA88006E3969 /* PhotoCell.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		B53558F06A881EC980339AB2 /* Frameworks */ = {
@@ -332,9 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A3E3FC2487B2CE006E3969 /* Contacts.storyboard in Resources */,
+				80A3E4082488D090006E3969 /* ContactDetails.storyboard in Resources */,
 				80A3E4042487DE75006E3969 /* fontawesome-brands.otf in Resources */,
 				80A3E3C8248785F4006E3969 /* LaunchScreen.storyboard in Resources */,
 				80A3E4032487DE71006E3969 /* fontawesome.otf in Resources */,
+				80A3E40B2488D79F006E3969 /* Photos.storyboard in Resources */,
 				80A3E4062487E090006E3969 /* fontawesome-solid-900.otf in Resources */,
 				80A3E3C5248785F4006E3969 /* Assets.xcassets in Resources */,
 			);
@@ -465,8 +487,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A3E3FE2487CC91006E3969 /* Contact.swift in Sources */,
+				80A3E40D2488D7E8006E3969 /* PhotosViewController.swift in Sources */,
 				80A3E3F72487A869006E3969 /* RightMessageTableViewCell.swift in Sources */,
 				80A3E3F92487B07D006E3969 /* TabBarController.swift in Sources */,
+				80A3E40F2488DA88006E3969 /* PhotoCell.swift in Sources */,
 				80A3E3EF248791EA006E3969 /* Message.swift in Sources */,
 				80A3E3F124879BCF006E3969 /* MessageTableViewCell.swift in Sources */,
 				80A3E3F32487A255006E3969 /* MessageCellType.swift in Sources */,
