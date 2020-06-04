@@ -13,21 +13,17 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var contactsSerach: UISearchBar!
     @IBOutlet weak var contactsTableView: UITableView!
     
-    let contacts = [
-        Contact(firstName: "Jan", lastName: "Kowalski", profilePhotoUrl: ""),
-        Contact(firstName: "Marek", lastName: "Nowak", profilePhotoUrl: ""),
-        Contact(firstName: "Anna", lastName: "Wesołowska", profilePhotoUrl: "")
-    ]
+    var contacts: [Contact] = []
     var contactsService: ContactsService?
     var filteredContacts: [Contact]?
     
     override func viewDidLoad() {
         do {
             contactsService = try SQLiteContactsService(dbFile: "db.sqlite3")
+            contacts = contactsService?.getAll() ?? []
         } catch let error {
             print("Exception: \(error)")
         }
-        contactsService?.add(contact: contacts[0])
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

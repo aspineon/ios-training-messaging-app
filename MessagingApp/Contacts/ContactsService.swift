@@ -12,4 +12,6 @@ protocol ContactsService {
     
     func getAll() -> [Contact]
     
+    func refresh()
+    
 }
